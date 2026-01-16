@@ -1,9 +1,15 @@
+import 'signup.dart';
 import 'package:flutter/material.dart';
-//import 'package:the_app/screens/homescreen.dart';
-import 'package:trackivore/screens/settings.dart';
-import 'package:trackivore/screens/setup.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'services/hive_initializer.dart';
+import 'screens/homescreen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await HiveInitializer.init();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -15,13 +21,31 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Animated Bottom Navigation Demo',
       debugShowCheckedModeBanner: false,
+      home: AuthGate(),
+    );
+  }
+}
 
-      theme: ThemeData(fontFamily: 'Roboto'),
-      //darkTheme: ThemeData.dark(),
-      //themeMode: ThemeMode.system,
-      supportedLocales: [Locale('en', 'US'), Locale('es', 'ES')],
-      initialRoute: '/',
-      routes: {'/': (context) => Setup(), '/settings': (context) => Settings()},
+class AuthGate extends StatelessWidget {
+  const AuthGate({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<User?>(
+      stream: FirebaseAuth.instance.authStateChanges(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Scaffold(
+            body: Center(child: CircularProgressIndicator()),
+          );
+        }
+
+        if (snapshot.hasData) {
+          return const HomePage();
+        }
+
+        return const SignUpPage();
+      },
     );
   }
 }

@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "574918835946",
+    "project_id": "flutterproject-349",
+    "storage_bucket": "flutterproject-349.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574918835946:android:0f9f7942ce72b509c3a193",
+        "android_client_info": {
+          "package_name": "com.example.component"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574918835946-fpb3ipv4suqgr5fd8o1i8s9kp5r66cr0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.component",
+            "certificate_hash": "cbbe0397ec4713d5ee97ad6046006856a6feac98"
+          }
+        },
+        {
+          "client_id": "574918835946-igousv43dive8fdslb6n5obsemu1b27f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbMArT5z-4sVC_aBJdOPe0BBrKp-OQerM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574918835946-igousv43dive8fdslb6n5obsemu1b27f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "574918835946-820uh5rqp2a4vh282ukr8u4ess43rmea.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.trackivore"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574918835946:android:2dfd1a634a9736d7c3a193",
+        "android_client_info": {
+          "package_name": "com.example.trackivore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574918835946-39s4h2k89hanu2tais1gospn6g1dk104.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.trackivore",
+            "certificate_hash": "cbbe0397ec4713d5ee97ad6046006856a6feac98"
+          }
+        },
+        {
+          "client_id": "574918835946-igousv43dive8fdslb6n5obsemu1b27f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbMArT5z-4sVC_aBJdOPe0BBrKp-OQerM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574918835946-igousv43dive8fdslb6n5obsemu1b27f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "574918835946-820uh5rqp2a4vh282ukr8u4ess43rmea.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.trackivore"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
